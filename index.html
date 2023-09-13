@@ -27,7 +27,7 @@ select{
 
 
 
-<body>
+<body onload="myFunction()">
 <center>
 </br></br>
 <h1>ระบบค้นหาตารางสอบ</h1>
@@ -48,12 +48,13 @@ select{
 </center>
 <script>
 
-window.onload = function() {
+function myFunction() {
   liff.init({
     liffId: '2000740054-9NmKMmBo', // Use own liffId
     withLoginOnExternalBrowser: true, // Enable automatic login process
 }).then(() => {
-  showData();
+  console.log(liff.getOS());
+  //showData();
 });
 }
 
