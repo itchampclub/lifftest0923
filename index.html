@@ -54,14 +54,15 @@ function myFunction() {
     withLoginOnExternalBrowser: true, // Enable automatic login process
 }).then(() => {
   console.log(liff.getOS());
-  //showData();
+  showData();
 });
 }
 
 function showData() {
 
-liff.getProfile().then(function(profile) {
-            var uuid = profile.userId;
+liff.liff.getDecodedIDToken().then(function(profile) {
+            var uuid = profile.sub;
+            console.log(uuid)
            // var uname = profile.displayName;
            // var xos = liff.getOS();
         var xmlhttp = new XMLHttpRequest();
