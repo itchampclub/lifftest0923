@@ -30,7 +30,7 @@ select{
 <body onload="myFunction()">
 <center>
 </br></br>
-<h1>ระบบค้นหาตารางสอบ1</h1>
+<h1>ระบบค้นหาตารางสอบ</h1>
 </br>
 <table class="table table-bordered" id="mytb" >
   <thead>
@@ -60,8 +60,8 @@ function myFunction() {
 
 function showData() {
 
-liff.getDecodedIDToken().then(function(profile) {
-            var uuid = profile.sub;
+liff.getProfile().then(function(profile) {
+            var uuid = profile.userId;
             console.log(uuid)
            // var uname = profile.displayName;
            // var xos = liff.getOS();
