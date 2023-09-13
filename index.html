@@ -47,20 +47,14 @@ select{
   </table>
 </center>
 <script>
-window.onload = function() {
-  initializeLiff('2000740054-9NmKMmBo');
-}
 
-function initializeLiff(myLiffId) {
-    liff
-        .init({
-            liffId: myLiffId
-        })
-        .then(() => {
-          showData();
-        })
-        .catch((err) => {
-        });
+window.onload = function() {
+  liff.init({
+    liffId: '2000740054-9NmKMmBo', // Use own liffId
+    withLoginOnExternalBrowser: true, // Enable automatic login process
+}).then(() => {
+  showData();
+});
 }
 
 function showData() {
